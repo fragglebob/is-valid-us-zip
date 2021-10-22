@@ -4,13 +4,15 @@
   "description": "A small library for checking if a US 5 Digit ZIP code is real",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:ci": "CI=true jest --reporters=default --reporters=jest-github-actions-reporter"
   },
   "author": "Rob Wells <rob@robw.tf>",
   "license": "ISC",
   "devDependencies": {
     "event-stream": "^4.0.1",
     "jest": "^27.3.1",
+    "jest-github-actions-reporter": "^1.0.3",
     "stream-reduce": "^1.0.3"
   }
 }
