@@ -24,7 +24,7 @@ function isValidUSZip(zipCode) {
         return false;
     }
 
-    if(zipCode.match(/^\d{5}$/) === false) {
+    if(zipCode.match(/^\d{5}$/) === null) {
         return false;
     }
 
