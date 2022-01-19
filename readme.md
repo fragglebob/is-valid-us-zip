@@ -1,6 +1,6 @@
 # Is Valid US ZIP
 
-A small library for checking if a US 5 Digit ZIP code is real.
+A "small" library for checking if a US 5 Digit ZIP code is real.
 
 # Install
 
