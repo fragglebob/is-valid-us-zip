@@ -1,6 +1,6 @@
 {
   "name": "is-valid-us-zip",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A small library for checking if a US 5 Digit ZIP code is real",
   "main": "index.js",
   "scripts": {
