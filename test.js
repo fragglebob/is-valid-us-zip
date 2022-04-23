@@ -22,7 +22,17 @@ it("should return false for non numeric chacter", () => {
     expect(isValidUSZip("!@#$%")).toBe(false);
 });
 
-it("should should only except strings as input", () => {
+it("should only except strings as input", () => {
     expect(isValidUSZip(20500)).toBe(false);
     expect(isValidUSZip([2, 0, 5, 0, 0])).toBe(false);
 });
+
+const codes = ["03073", "97011", "95352", "38848", "57570", "19492", "51103"];
+
+codes.forEach(code => {
+    it("should return true for this code " + code, () => {
+        expect(isValidUSZip(code)).toBe(true);
+    })
+    
+})
+
