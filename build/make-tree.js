@@ -113,18 +113,6 @@ process.stdin
             return varsMap[substring];
         });
 
-
-
-        // console.log(varsMap);
-
-        // orderedNumbers.forEach(a => {
-        //     const num = a.number[0] === "-" ? "\\" + a.number : a.number;
-        //     const regex = new RegExp(`(?:\\[${num}\\,|\\,${num}\\]|\\,${num}\\,|\\[${num}\\])`, 'g');
-        //     optimizedJsString = optimizedJsString.replace(regex, (substring) => {
-        //         // a.number === "-1" && console.log(a, substring.replace(a.number, a.varName));
-        //         return substring.replace(a.number, a.varName);
-        //     });
-        // });
         console.log("Post number optimize size", `const ${vars};\nmodule.exports=${optimizedJsString}`.length, 22680);
         cb(null, `const ${vars};\nmodule.exports=${optimizedJsString}`);
     }))
