@@ -35,10 +35,10 @@ process.stdin
 
                 if (i + 2 === len) {
                     if (!treeLevel[digit]) {
-                        treeLevel[digit] = 0;
+                        treeLevel[digit] = 1023;
                     }
-                    const finalDigit = +zip[i + 1];
-                    treeLevel[digit] |= (1 << (finalDigit));
+                    const finalDigit = zip[i + 1];
+                    treeLevel[digit] ^= (1 << (9-finalDigit));
                 } else {
                     if (!treeLevel[digit]) {
                         treeLevel[digit] = [];

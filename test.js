@@ -26,3 +26,19 @@ it("should should only except strings as input", () => {
     expect(isValidUSZip(20500)).toBe(false);
     expect(isValidUSZip([2, 0, 5, 0, 0])).toBe(false);
 });
+
+const validZips = ["50830", "50158", "08360", "89124", "60160", "97819", "22180", "15380"]
+
+validZips.forEach(validZip => {
+    it(`should match ${validZip} as a valid zip`, () => {
+        expect(isValidUSZip(validZip)).toBe(true);
+    })
+})
+
+const invalidZips = ["90995", "01804", "78769", "12728", "40945", "56903"];
+
+invalidZips.forEach(invalidZip => {
+    it(`should match ${invalidZip} as a not valid zip`, () => {
+        expect(isValidUSZip(invalidZip)).toBe(false);
+    })
+})

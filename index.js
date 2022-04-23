@@ -1,19 +1,20 @@
 const zipTree = require("./zip-tree");
 
-function findZipInTree(zipCode) {
-    let treePosistion = zipTree;
+function findZipInTree(zip) {
 
-    for (let index = 0; index < zipCode.length - 1; index++) {
-        const element = +zipCode[index];
-        if(treePosistion[element] == null) {
+    let treePos = zipTree;
+
+    for (let i = 0; i < zip.length - 1; i++) {
+        const zi = +zip[i];
+        if(treePos[zi] == null) {
             return false;
         }
-        treePosistion = treePosistion[element]
+        treePos = treePos[zi]
     }
 
-    const bitValue = (1 << +zipCode[4]);
+    const bitValue = (1 << (9-zip[4]));
 
-    return (treePosistion & bitValue) === bitValue;
+    return (treePos & bitValue) !== bitValue;
 }
 
 function isValidUSZip(zipCode) {
